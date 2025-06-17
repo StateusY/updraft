@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:book"
+          ],
+          "predicates": {
+            "minecraft:custom_data": {"custom_id": "learning_book_gust_core"}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "updraft:learn_gust_core_recipe"
+  }
+}

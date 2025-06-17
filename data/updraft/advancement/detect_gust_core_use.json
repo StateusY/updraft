@@ -1,0 +1,20 @@
+{
+  "criteria": {
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:firework_star"
+          ],
+          "predicates": {
+            "minecraft:custom_data": {"custom_id": "gust_core"}
+          }
+        }
+      }
+    }
+  },
+  "rewards": {
+    "function": "updraft:trigger_updraft_creation"
+  }
+}

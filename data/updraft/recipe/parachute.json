@@ -1,0 +1,41 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "ingredients": [
+    "minecraft:phantom_membrane",
+    "minecraft:twisting_vines",
+    "minecraft:leather"
+  ],
+  "pattern": [
+    "MMM",
+    "V V",
+    " L "
+  ],
+  "key": {
+    "M": "minecraft:phantom_membrane",
+    "V": "minecraft:twisting_vines",
+    "L": "minecraft:leather"
+  },
+  "result": {
+    "components": {
+      "minecraft:item_name": "Parachute",
+      "minecraft:custom_data": {
+        "custom_id": "undeployed_parachute"
+      },
+      "minecraft:consumable": {
+        "consume_seconds": 0,
+        "animation": "none",
+        "sound": "minecraft:item.armor.equip_leather",
+        "has_consume_particles": false,
+        "on_consume_effects": []
+      },
+      "minecraft:food": {
+        "nutrition": 0,
+        "saturation": 0,
+        "can_always_eat": true
+      }
+    },
+    "count": 1,
+    "id": "minecraft:phantom_membrane"
+  }
+}
