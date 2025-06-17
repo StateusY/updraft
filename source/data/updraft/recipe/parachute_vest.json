@@ -1,0 +1,45 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "category": "misc",
+  "pattern": [
+    "MMM",
+    "V V",
+    " L "
+  ],
+  "key": {
+    "M": "minecraft:phantom_membrane",
+    "V": "minecraft:twisting_vines",
+    "L": "minecraft:leather_chestplate"
+  },
+  "result": {
+    "components": {
+      "minecraft:custom_name": "Parachute Vest",
+      "minecraft:custom_data": {
+        "custom_id": "parachute_vest"
+      },
+      "minecraft:dyed_color": 15975679,
+      "minecraft:attribute_modifiers": [
+        {
+          "type": "minecraft:safe_fall_distance",
+          "id": "minecraft:safe_fall_distance",
+          "amount": 3,
+          "operation": "add_value",
+          "slot": "chest"
+        }
+      ],
+      "minecraft:tooltip_display": {
+        "hide_tooltip": false,
+        "hidden_components": [
+          "minecraft:dyed_color"
+        ]
+      },
+      "minecraft:max_damage": 250,
+      "minecraft:lore": [
+        "Fall safely from the greatest of heights!"
+      ]
+    },
+    "count": 1,
+    "id": "minecraft:leather_chestplate"
+  },
+  "show_notification": true
+}
