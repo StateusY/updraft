@@ -4,7 +4,7 @@ Updraft is a server-side datapack that works on Vanilla, Fabric, Quilt, Forge, a
 
 This datapack attempts to add an early-mid game (before elytra) method of flight/vertical transportation that encourages player infrastructure.
 
-Modrinth: _coming soon_
+[Modrinth Page](https://modrinth.com/datapack/updraft)
 
 ---
 
