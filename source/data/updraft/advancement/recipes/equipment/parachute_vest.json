@@ -1,0 +1,54 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_phantom_membrane_charge": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:phantom_membrane"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_twisting_vine_charge": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:twisting_vines"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_leather_chestplate_charge": {
+      "conditions": {
+        "items": [
+          {
+            "items": "minecraft:leather_chestplate"
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "updraft:gust_core"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_the_recipe",
+      "has_phantom_membrane_charge",
+      "has_leather_chestplate_charge",
+      "has_twisting_vine_charge"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "updraft:parachute_vest"
+    ]
+  }
+}
