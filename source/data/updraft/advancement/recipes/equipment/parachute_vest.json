@@ -33,7 +33,7 @@
     },
     "has_the_recipe": {
       "conditions": {
-        "recipe": "updraft:gust_core"
+        "recipe": "updraft:parachute_vest"
       },
       "trigger": "minecraft:recipe_unlocked"
     }
