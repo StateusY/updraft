@@ -13,7 +13,7 @@
   },
   "result": {
     "components": {
-      "minecraft:custom_name": "Parachute Vest",
+      "minecraft:custom_name": {"translate": "updraft.parachute_vest_item_name"},
       "minecraft:custom_data": {
         "custom_id": "parachute_vest"
       },
@@ -35,7 +35,7 @@
       },
       "minecraft:max_damage": 250,
       "minecraft:lore": [
-        "Fall safely from the greatest of heights!"
+        {"translate": "updraft.parachute_vest_item_lore_1"}
       ]
     },
     "count": 1,

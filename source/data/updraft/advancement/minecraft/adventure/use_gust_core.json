@@ -1,39 +1,35 @@
 {
-  "parent": "tcc:minecraft/adventure/enter_tundra_keep",
-  "display": {
-    "icon": {
-      "id": "minecraft:stone",
-      "components": {
-        "minecraft:item_model": "tcc:frostbloom"
-      }
-    },
-    "title": {
-      "translate": "advancements.tcc.minecraft.adventure.plant_frostbloom.title"
-    },
-    "description": [
-      {
-        "translate": "advancements.tcc.minecraft.adventure.plant_frostbloom.description"
-      },
-      "\n\n",
-      {
-        "translate": "pack.tcc",
-        "color": "#008725",
-        "italic": true
-      }
-    ],
-    "frame": "task",
-    "show_toast": true,
-    "announce_to_chat": true,
-    "hidden": false
-  },
+  "parent": "minecraft:adventure/minecraft_trials_edition",
   "criteria": {
-    "impossible": {
-      "trigger": "minecraft:impossible"
+    "requirement": {
+      "trigger": "minecraft:consume_item",
+      "conditions": {
+        "item": {
+          "items": [
+            "minecraft:firework_star"
+          ],
+          "predicates": {
+            "minecraft:custom_data": {"custom_id": "gust_core"}
+          }
+        }
+      }
     }
   },
-  "requirements": [
-    [
-      "impossible"
-    ]
-  ]
+  "display": {
+    "description": {
+      "translate": "updraft.gustup_adv_desc"
+    },
+    "frame": "task",
+    "icon": {
+      "count": 1,
+      "id": "minecraft:firework_star"
+    },
+    "title": {
+      "translate": "updraft.gustup_adv_title"
+    }
+  },
+  "rewards": {
+    "experience": 40
+  },
+  "sends_telemetry_event": true
 }

@@ -23,31 +23,4 @@ execute at @e[type=end_crystal,tag=large_updraft_fan] positioned ~ ~55 ~ run par
 
 
 #PARACHUTE VEST
-
-#detect vest application and removal
-execute as @a[tag=!ud.parachute_vest_on] if predicate updraft:is_parachute_vest_on run tag @s add ud.parachute_vest_on
-execute as @a[tag=ud.parachute_vest_on] unless predicate updraft:is_parachute_vest_on run tag @s remove ud.parachute_landed
-execute as @a[tag=ud.parachute_vest_on] unless predicate updraft:is_parachute_vest_on run tag @s remove ud.parachute_falling
-execute as @a[tag=ud.parachute_vest_on] unless predicate updraft:is_parachute_vest_on run tag @s add ud.parachute_vest_removed
-execute as @a[tag=ud.parachute_vest_removed] run tag @s remove ud.parachute_vest_on
-execute as @a[tag=ud.parachute_vest_removed] run effect clear @s minecraft:slow_falling
-execute as @a[tag=ud.parachute_vest_removed] run effect clear @s minecraft:levitation
-execute as @a[tag=ud.parachute_vest_removed] run tag @s remove ud.parachute_vest_removed
-
-#if_falling
-execute as @a[tag=ud.parachute_vest_on,tag=!ud.parachute_landed,tag=!ud.parachute_falling] at @s if block ~ ~-7 ~ air if block ~ ~-6 ~ air if block ~ ~-5 ~ air if block ~ ~-4 ~ air if block ~ ~-3 ~ air if block ~ ~-2 ~ air if block ~ ~-1 ~ air run tag @s add ud.parachute_falling_begin
-execute as @a[tag=ud.parachute_vest_on,tag=!ud.parachute_landed,tag=ud.parachute_falling_begin] run effect give @s minecraft:levitation 1 0 true
-execute as @a[tag=ud.parachute_vest_on,tag=!ud.parachute_landed,tag=ud.parachute_falling_begin] run playsound minecraft:item.armor.equip_generic
-execute as @a[tag=ud.parachute_vest_on, tag=!ud.parachute_landed, tag=ud.parachute_falling_begin, tag=!ud.parachute_falling] run tag @s add ud.parachute_falling
-execute as @a[tag=ud.parachute_falling_begin] run tag @s remove ud.parachute_falling_begin
-execute as @a[tag=ud.parachute_vest_on,tag=!ud.parachute_landed,tag=ud.parachute_falling] run effect give @s minecraft:slow_falling 1 0 true
-execute as @a[tag=ud.parachute_vest_on,tag=!ud.parachute_landed,tag=ud.parachute_falling] run execute at @a run particle minecraft:end_rod ~ ~2.5 ~ .5 0 .5 0 30 normal
-
-execute as @a[tag=ud.parachute_vest_on,tag=ud.parachute_falling] at @s unless block ~ ~-1 ~ air run tag @s add ud.parachute_landed
-execute as @a[tag=ud.parachute_landed] run tag @s remove ud.parachute_falling
-execute as @a[tag=ud.parachute_landed] run effect clear @s minecraft:slow_falling
-execute as @a[tag=ud.parachute_landed] run effect clear @s minecraft:levitation
-execute as @a[tag=ud.parachute_vest_on,tag=ud.parachute_landed] run playsound minecraft:entity.player.small_fall
-execute as @a[tag=ud.parachute_landed] run tag @s remove ud.parachute_landed
-
-
+function updraft:parachute_vest/update
